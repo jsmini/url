@@ -15,7 +15,7 @@ export function parse(url, parseQueryString = false) {
     if (!temp) {
         return {
             href: url
-        }
+        };
     }
 
     const res = {

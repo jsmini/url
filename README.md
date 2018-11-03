@@ -7,7 +7,7 @@
 [![NPM downloads](http://img.shields.io/npm/dm/@jsmini/url.svg?style=flat-square)](http://www.npmtrends.com/@jsmini/url)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/url.svg)](http://isitmaintained.com/project/jsmini/url "Percentage of issues still open")
 
-url解析库
+url解析库 
 
 ## 兼容性
 单元测试保证支持如下环境：
