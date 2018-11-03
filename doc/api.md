@@ -1,24 +1,75 @@
 # 文档
-这是一个xxx库，有xxx功能
+这是一个url解析库
 
-## api模版
-函数简单介绍
+## parse
+将url字符串解析为url对象
 
-函数详细介绍
+函数参数和返回值
 
-函数参数和返回值（要遵守下面的例子的规则）
+- param {string} url 待解析的url
+- param {boolean} [parseQueryString=false] 是否将参数部分解析为对象
+- return {object} 返回解析好的对象
 
-- param {string} name1 name1描述
-- param {number} [name2] name2描述 ([]代表可选参数)
-- param {string|number} name3 name3描述 (| 代表多种类型)
-- param {*} name3 name3描述 (*代表任意类型)
-- param {boolean} obj.sex 复合参数定义
-- return {string} 返回值描述
-
-举个例子（要包含代码用例）
+举个例子
 
 ```js
-// 代码
+jsmini_url.parse('http://yanhaijing.com?a=1')
+// 输出：
+// {
+//     hash: ""
+//     host: "yanhaijing.com"
+//     hostname: "yanhaijing.com"
+//     href: "http://yanhaijing.com?a=1"
+//     origin: "http://yanhaijing.com"
+//     path: "?a=1"
+//     pathname: ""
+//     port: ""
+//     protocol: "http:"
+//     query: "a=1"
+//     search: "?a=1"
+// }
+
+jsmini_url.parse('http://yanhaijing.com?a=1', true)
+
+// 输出：
+// {
+//     hash: ""
+//     host: "yanhaijing.com"
+//     hostname: "yanhaijing.com"
+//     href: "http://yanhaijing.com?a=1"
+//     origin: "http://yanhaijing.com"
+//     path: "?a=1"
+//     pathname: ""
+//     port: ""
+//     protocol: "http:"
+//     query: { a: 1 } // 注意这里的区别
+//     search: "?a=1"
+// }
 ```
 
-特殊说明，比如特殊情况下会报错等
+## format
+将url对象，格式化为url字符串
+
+函数参数和返回值
+
+- param {object} urlObj parse返回格式的对象
+- return {string} 格式化的字符串
+
+举个例子
+
+```js
+jsmini_url.parse({
+    hash: ""
+    host: "yanhaijing.com"
+    hostname: "yanhaijing.com"
+    href: "http://yanhaijing.com?a=1"
+    origin: "http://yanhaijing.com"
+    path: "?a=1"
+    pathname: ""
+    port: ""
+    protocol: "http:"
+    query: "a=1"
+    search: "?a=1"
+})
+// 输出：'http://yanhaijing.com?a=1'
+```

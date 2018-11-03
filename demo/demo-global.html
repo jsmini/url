@@ -10,7 +10,21 @@
     
     <script src="../dist/index.aio.js"></script>
     <script>
-        console.log(jslib_base.name);
+        console.log(jsmini_url.parse('http://user:pass@host.com:8080/p/a/t/h?query=string#hash'));
+        console.log(jsmini_url.format({
+            auth: "user:pass",
+            hash: "#hash",
+            host: "host.com:8080",
+            hostname: "host.com",
+            href: "http://user:pass@host.com:8080/p/a/t/h?query=string#hash",
+            origin: "http://user:pass@host.com:8080",
+            path: "/p/a/t/h?query=string",
+            pathname: "/p/a/t/h",
+            port: "8080",
+            protocol: "http:",
+            query: "query=string",
+            search: "?query=string",
+        }));
     </script>
 </body>
 </html>
