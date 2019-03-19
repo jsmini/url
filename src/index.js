@@ -1,10 +1,9 @@
-import {isObject} from '@jsmini/is';
+import { type } from '@jsmini/type';
 
-import {parse as parseQs} from '@jsmini/querystring';
+import { parse as parseQs } from '@jsmini/querystring';
 
 export function parse(url, parseQueryString = false) {
     url = String(url);
-    parseQueryString = !!parseQueryString;
 
     // http://user:pass@host.com:8080/p/a/t/h?query=string#hash
     const temp = url
@@ -37,13 +36,15 @@ export function parse(url, parseQueryString = false) {
 
     res.origin = res.protocol + '//' + res.auth + (res.auth ? '@' : '') + res.host;
 
-    res.query = parseQueryString ? parseQs(res.query) : res.query;
+    res.query = parseQueryString
+        ? parseQs(res.query, type(parseQueryString) === 'object' ? parseQueryString : {})
+        : res.query;
 
     return res;
 }
 
 export function format(urlObj) {
-    if (!isObject(urlObj)) {
+    if (type(urlObj) !== 'object') {
         throw new TypeError('first param must is object');
     }
 

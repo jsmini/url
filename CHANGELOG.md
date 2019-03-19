@@ -1,5 +1,9 @@
 # 变更日志
 
+## 0.3.0 / 2019-3-19
+
+- feat: parse的parseQueryString参数可传递给qs的parse
+
 ## 0.2.1 / 2019-3-4
 
 - fix: 修复依赖不自动更新的问题

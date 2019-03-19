@@ -7,7 +7,7 @@
 函数参数和返回值
 
 - param {string} url 待解析的url
-- param {boolean} [parseQueryString=false] 是否将参数部分解析为对象
+- param {boolean|object} [parseQueryString=false] 是否将参数部分解析为对象，如果为对象，将作为参数传递给querystring
 - return {object} 返回解析好的对象
 
 举个例子
