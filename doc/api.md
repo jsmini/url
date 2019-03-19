@@ -53,6 +53,7 @@ jsmini_url.parse('http://yanhaijing.com?a=1', true)
 函数参数和返回值
 
 - param {object} urlObj parse返回格式的对象
+- param {object} [stringifyQueryString={}] 传递给qs stringify的参数
 - return {string} 格式化的字符串
 
 举个例子

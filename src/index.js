@@ -1,6 +1,6 @@
 import { type } from '@jsmini/type';
 
-import { parse as parseQs } from '@jsmini/querystring';
+import { parse as parseQs, stringify } from '@jsmini/querystring';
 
 export function parse(url, parseQueryString = false) {
     url = String(url);
@@ -43,7 +43,7 @@ export function parse(url, parseQueryString = false) {
     return res;
 }
 
-export function format(urlObj) {
+export function format(urlObj, stringifyQueryString = {}) {
     if (type(urlObj) !== 'object') {
         throw new TypeError('first param must is object');
     }
@@ -55,10 +55,13 @@ export function format(urlObj) {
     const pathname = urlObj.pathname || '';
     const query = urlObj.query || '';
     const hash = urlObj.hash || '';
+    const querystring = type(query) === 'object'
+        ? stringify(query, stringifyQueryString)
+        : query;
 
     const res = protocol + '//' + auth + (auth ? '@' : '')
         + hostname + (port ? ':' : '') + port
-        + pathname + (query ? '?' : '') + query + hash;
+        + pathname + (querystring ? '?' : '') + querystring + hash;
 
     return res === '//' ? urlObj.href : res; // backup 全部为空的bug
 }

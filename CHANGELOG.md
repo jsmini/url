@@ -1,5 +1,9 @@
 # 变更日志
 
+## 0.4.0 / 2019-3-19
+
+- feat: format新增stringifyQueryString参数
+
 ## 0.3.0 / 2019-3-19
 
 - feat: parse的parseQueryString参数可传递给qs的parse
