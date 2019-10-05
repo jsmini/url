@@ -1,7 +1,7 @@
 var expect = require('expect.js');
 
-var parse = require('../dist/index.js').parse;
-var format = require('../dist/index.js').format;
+var parse = require('../src/index.js').parse;
+var format = require('../src/index.js').format;
 
 describe('单元测试', function() {
     this.timeout(1000);
