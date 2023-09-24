@@ -1,23 +1,23 @@
-# [url](https://github.com/jsmini/url) 
+# [url](https://github.com/jsmini/url)
 
 [![](https://img.shields.io/badge/Powered%20by-jslib%20url-brightgreen.svg)](https://github.com/yanhaijing/jslib-url)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/url/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/jsmini/url.svg?branch=master)](https://travis-ci.org/jsmini/url)
-[![Coveralls](https://img.shields.io/coveralls/jsmini/url.svg)](https://coveralls.io/github/jsmini/url)
-[![npm](https://img.shields.io/badge/npm-0.4.2-orange.svg)](https://www.npmjs.com/package/@jsmini/url)
+[![CI](https://github.com/jsmini/url/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/jsmini/url/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/badge/npm-0.5.0-orange.svg)](https://www.npmjs.com/package/@jsmini/url)
 [![NPM downloads](http://img.shields.io/npm/dm/@jsmini/url.svg?style=flat-square)](http://www.npmtrends.com/@jsmini/url)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/url.svg)](http://isitmaintained.com/project/jsmini/url "Percentage of issues still open")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/url.svg)](http://isitmaintained.com/project/jsmini/url 'Percentage of issues still open')
 
-url解析库 
+url解析库
 
 [English](./README.md) | 简体中文
 
 ## 兼容性
+
 单元测试保证支持如下环境：
 
-| IE   | CH   | FF   | SF   | OP   | IOS  | 安卓   | Node  |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
-| 6+   | 23+  | 4+   | 6+   | 10+  | 5+   | 2.3+ | 0.10+ |
+| IE  | CH  | FF  | SF  | OP  | IOS | 安卓 | Node  |
+| --- | --- | --- | --- | --- | --- | ---- | ----- |
+| 6+  | 23+ | 4+  | 6+  | 10+ | 5+  | 2.3+ | 0.10+ |
 
 ## 目录介绍
 
@@ -33,6 +33,7 @@ url解析库
 ```
 
 ## 如何使用
+
 通过npm下载安装代码
 
 ```bash
@@ -54,9 +55,12 @@ import { name } from '@jsmini/url';
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/@jsmini/url/dist/index.aio.js'], function (jsmini_url) {
+requirejs(
+  ['node_modules/@jsmini/url/dist/index.aio.js'],
+  function (jsmini_url) {
     var name = jsmini_url.name;
-})
+  },
+);
 ```
 
 如果你是浏览器环境
@@ -65,14 +69,16 @@ requirejs(['node_modules/@jsmini/url/dist/index.aio.js'], function (jsmini_url) 
 <script src="node_modules/@jsmini/url/dist/index.aio.js"></script>
 
 <script>
-    var name = jsmini_url.name;
+  var name = jsmini_url.name;
 </script>
 ```
 
 ## 文档
+
 [API](https://github.com/jsmini/url/blob/master/doc/api.md)
 
-## 贡献指南  ![PRs welcome](<https://img.shields.io/badge/PRs-welcome-brightgreen.svg>)
+## 贡献指南 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
 首次运行需要先安装依赖
 
 ```bash
@@ -115,12 +121,15 @@ $ npm run rename # 重命名命令
 ```
 
 ## 贡献者列表
+
 [contributors](https://github.com/jsmini/url/graphs/contributors)
 
 ## 更新日志
+
 [CHANGELOG.md](https://github.com/jsmini/url/blob/master/CHANGELOG.md)
 
 ## 计划列表
+
 [TODO.md](https://github.com/jsmini/url/blob/master/TODO.md)
 
 ## 谁在使用

@@ -1,30 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script src="../node_modules/es5-shim/es5-shim.js"></script>
     <script src="../node_modules/es5-shim/es5-sham.js"></script>
-    
+
     <script src="../dist/index.aio.js"></script>
     <script>
-        console.log(jsmini_url.parse('http://user:pass@host.com:8080/p/a/t/h?query=string#hash'));
-        console.log(jsmini_url.format({
-            auth: "user:pass",
-            hash: "#hash",
-            host: "host.com:8080",
-            hostname: "host.com",
-            href: "http://user:pass@host.com:8080/p/a/t/h?query=string#hash",
-            origin: "http://user:pass@host.com:8080",
-            path: "/p/a/t/h?query=string",
-            pathname: "/p/a/t/h",
-            port: "8080",
-            protocol: "http:",
-            query: "query=string",
-            search: "?query=string",
-        }));
+      console.log(
+        jsmini_url.parse(
+          'http://user:pass@host.com:8080/p/a/t/h?query=string#hash',
+        ),
+      );
+      console.log(
+        jsmini_url.format({
+          auth: 'user:pass',
+          hash: '#hash',
+          host: 'host.com:8080',
+          hostname: 'host.com',
+          href: 'http://user:pass@host.com:8080/p/a/t/h?query=string#hash',
+          origin: 'http://user:pass@host.com:8080',
+          path: '/p/a/t/h?query=string',
+          pathname: '/p/a/t/h',
+          port: '8080',
+          protocol: 'http:',
+          query: 'query=string',
+          search: '?query=string',
+        }),
+      );
     </script>
-</body>
+  </body>
 </html>

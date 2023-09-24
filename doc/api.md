@@ -1,7 +1,9 @@
 # 文档
+
 这是一个url解析库
 
 ## parse
+
 将url字符串解析为url对象
 
 函数参数和返回值
@@ -13,7 +15,7 @@
 举个例子
 
 ```js
-jsmini_url.parse('http://yanhaijing.com?a=1')
+jsmini_url.parse('http://yanhaijing.com?a=1');
 // 输出：
 // {
 //     hash: ""
@@ -29,7 +31,7 @@ jsmini_url.parse('http://yanhaijing.com?a=1')
 //     search: "?a=1"
 // }
 
-jsmini_url.parse('http://yanhaijing.com?a=1', true)
+jsmini_url.parse('http://yanhaijing.com?a=1', true);
 
 // 输出：
 // {
@@ -48,6 +50,7 @@ jsmini_url.parse('http://yanhaijing.com?a=1', true)
 ```
 
 ## format
+
 将url对象，格式化为url字符串
 
 函数参数和返回值

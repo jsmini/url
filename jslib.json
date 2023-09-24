@@ -1,9 +1,9 @@
 {
-    "name": "url",
-    "npmname": "@jsmini/url",
-    "umdname": "jsmini_url",
-    "username": "jsmini",
-    "type": "js",
-    "lang": "zh",
-    "version": "1.4.0"
+  "name": "url",
+  "npmname": "@jsmini/url",
+  "umdname": "jsmini_url",
+  "username": "jsmini",
+  "type": "js",
+  "lang": "zh",
+  "version": "1.4.0"
 }
